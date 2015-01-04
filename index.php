@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>START Web</title>
+  <title>UVION web</title>
 
   <!-- Данное значение часто используют поисковые системы, заполняем ответственно -->
   <meta name="description" content="" />
@@ -37,104 +37,241 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- Подключаем файлы стилей -->
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/reset1.css" />
+  <link rel="stylesheet" type="text/css" href="template_styles.css" />
+<link rel="stylesheet" type="text/css" href="slider/camera.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <link href="carusel/css/style.css" rel="stylesheet" type="text/css" />
 
   <!-- Скрипты -->
   <script type="text/javascript" src="js/modernizr.custom.js"></script> <!-- Определение возможностей браузера -->
   <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script type='text/javascript' src='slider/jquery.easing.1.3.js?ver=1.3'></script>
+  <script type='text/javascript' src='slider/camera.min.js?ver=1.3.4'></script>
+  <script type="text/javascript" src="carusel/js/jquery.flexisel.js"></script>
+
+  <script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript">
+  wow = new WOW({
+  mobile: false
+});
+wow.init();
+</script>
+
 
 </head>
 
 <body>
 
 <div class="overlay"></div>
+<!--HEADER//-->
 <header>
   <div class="wrapper clearfix">
   <table width="100%" height="100" border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td width="200" align="left"><img src="images/logo.gif" width="189" height="60"></td>
+    <td width="200" align="left" class="logo"><a href="#"><img src="images/logo.png"></a></td>
     <td align="right" valign="middle">
-	<span class="tel">+7&nbsp;(499)&nbsp;34-68-200</span></td>
+	<span class="tel">+7&nbsp;(938)&nbsp;47-32-706</span><br><span  class="email"><a href="mailto:info@uvion.ru">web@uvion.ru</a></span></td>
     <td width="200" align="right" valign="middle">
-	<button class="btn-yellow" onClick="yaCounter26970030.reachGoal('orderopen'); return true;"></button>
+	<button class="btn-green" onClick="yaCounter26970030.reachGoal('orderopen'); return true;" >сделать заказ</button>
 	</td>
   </tr>
   </table>
-  </div> <!-- end wrapper -->
+  </div>
 </header>
+<!--//HEADER-->
 
 
-
+<!--Main Slider//-->
 <section class="l1">
-  <div class="wrapper">
-  <center>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td height="200" align="center" valign="bottom">
-		<span class="maintitle">Разработка, доработка<br>
-		и поддержка сайтов</span></td>
-      </tr>
-      <tr>
-        <td height="65" align="center" valign="bottom"><span class="subtitle">Быстро, качественно, не дорого!</span></td>
-      </tr>
-      <tr>
-        <td height="85" align="center" valign="bottom"><img src="images/bxlable.png" width="230" height="44"></td>
-      </tr>
-    </table>
-  </center>
-  </div> 
-  <!-- end wrapper -->
+<div class="motopress-wrapper slider-holder">
+<div id="slider-wrapper" class="slider">
+<script type="text/javascript">
+//    jQuery(window).load(function() {
+    jQuery(function() {
+      var myCamera = jQuery('#camera54a6528a9b299');
+      if (!myCamera.hasClass('motopress-camera')) {
+        myCamera.addClass('motopress-camera');
+        myCamera.camera({
+          alignment           : 'topCenter', //topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight
+          autoAdvance         : true,   //true, false
+          mobileAutoAdvance   : true, //true, false. Auto-advancing for mobile devices
+          barDirection        : 'leftToRight',    //'leftToRight', 'rightToLeft', 'topToBottom', 'bottomToTop'
+          barPosition         : 'top',    //'bottom', 'left', 'top', 'right'
+          cols                : 12,
+          easing              : 'easeOutQuad',  //for the complete list http://jqueryui.com/demos/effect/easing.html
+          mobileEasing        : '',   //leave empty if you want to display the same easing on mobile devices and on desktop etc.
+          fx                  : 'simpleFade',    //'random','simpleFade', 'curtainTopLeft', 'curtainTopRight', 'curtainBottomLeft',          'curtainBottomRight', 'curtainSliceLeft', 'curtainSliceRight', 'blindCurtainTopLeft', 'blindCurtainTopRight', 'blindCurtainBottomLeft', 'blindCurtainBottomRight', 'blindCurtainSliceBottom', 'blindCurtainSliceTop', 'stampede', 'mosaic', 'mosaicReverse', 'mosaicRandom', 'mosaicSpiral', 'mosaicSpiralReverse', 'topLeftBottomRight', 'bottomRightTopLeft', 'bottomLeftTopRight', 'bottomLeftTopRight'
+                          //you can also use more than one effect, just separate them with commas: 'simpleFade, scrollRight, scrollBottom'
+          mobileFx            : '',   //leave empty if you want to display the same effect on mobile devices and on desktop etc.
+          gridDifference      : 250,  //to make the grid blocks slower than the slices, this value must be smaller than transPeriod
+          height              : '38.88%', //here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
+          imagePath           : 'images/',    //he path to the image folder (it serves for the blank.gif, when you want to display videos)
+          loader              : 'no',    //pie, bar, none (even if you choose "pie", old browsers like IE8- can't display it... they will display always a loading bar)
+          loaderColor         : '#ffffff',
+          loaderBgColor       : '#eb8a7c',
+          loaderOpacity       : 1,    //0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1
+          loaderPadding       : 0,    //how many empty pixels you want to display between the loader and its background
+          loaderStroke        : 3,    //the thickness both of the pie loader and of the bar loader. Remember: for the pie, the loader thickness must be less than a half of the pie diameter
+          minHeight           : '147px',  //you can also leave it blank
+          navigation          : false, //true or false, to display or not the navigation buttons
+          navigationHover     : false,    //if true the navigation button (prev, next and play/stop buttons) will be visible on hover state only, if false they will be visible always
+          pagination          : true,
+          playPause           : false,   //true or false, to display or not the play/pause buttons
+          pieDiameter         : 33,
+          piePosition         : 'rightTop',   //'rightTop', 'leftTop', 'leftBottom', 'rightBottom'
+          portrait            : true, //true, false. Select true if you don't want that your images are cropped
+          rows                : 8,
+          slicedCols          : 12,
+          slicedRows          : 8,
+          thumbnails          : false,
+          time                : 7000,   //milliseconds between the end of the sliding effect and the start of the next one
+          transPeriod         : 1500, //lenght of the sliding effect in milliseconds
+
+                  ////////callbacks
+
+          onEndTransition     : function() {  },  //this callback is invoked when the transition effect ends
+          onLoaded            : function() {  },  //this callback is invoked when the image on a slide has completely loaded
+          onStartLoading      : function() {  },  //this callback is invoked when the image on a slide start loading
+          onStartTransition   : function() {  }   //this callback is invoked when the transition effect starts
+        });
+      }
+    });
+//    });
+</script>
+<div id="camera54a6528a9b299" class="camera_wrap camera">
+<div data-src="slider/images/slide_1.jpg" data-thumb="slider/images/slide_1-96.png"> <div class="camera_caption fadeIn">
+<strong>Разработка сайтов<br>любой сложности<em>Создание</em></strong> </div>
+</div><div data-src="slider/images/slide_2.jpg" data-thumb="slider/images/slide_2-96.png"> <div class="camera_caption fadeIn">
+<strong>Качественная доработка <br>готовых проектов<em>доработка</em></strong> </div>
+</div><div data-src="slider/images/slide_3.jpg" data-thumb="slider/images/slide_3-96.png"> <div class="camera_caption fadeIn">
+<strong>Профессиональная поддержка <br>ваших проектов<em>поддержка</em></strong> </div>
+</div>
+<div data-src="slider/images/slide_4.jpg" data-thumb="slider/images/slide_4-96.png"> <div class="camera_caption fadeIn">
+<strong>Быстрое продвижение<br>в глобальной сети<em>продвижение</em></strong> </div>
+</div>
+</div></div> </div>
+</section>
+<!--//Main Slider-->
+
+
+
+
+<section id="tech">
+  <header class="wow fadeIn" data-wow-delay=".3s">
+    <h3>Как устроены наши сайты</h3>
+    <h4>основные составляющие успешного web-проекта </h4>
+  </header>
+
+  <div class="layers">
+    <img src="images/tech.png" alt="wow">
+  </div>
+
+  <div class="flex explanation">
+    <article class="html wow fadeInDown" data-wow-offset="200">
+      <img src="images/layer-01.png" alt="">
+      <div class="col-4-12">
+        <h5>удобный интерфейс</h5>
+        <p>При разработке интерфейса сайта мы реализуем все Ваши самые смелые задумки. При этом обеспечим удобство для пользователей и простоту при работе с сайтом.</p>
+      </div>
+    </article>
+    <article class="chromium wow fadeInDown" data-wow-offset="400">
+      <img src="images/layer-02.png" alt="wow">
+      <div class="col-3-12">
+        <h5>HTML / JS / PHP</h5>
+        <p>Мы профессионалы своего дела, гарантируем использование самых современных технологий и качественных алгоритмов при программировании функциональной составляющей Вашего интернет-проекта.</p>
+      </div>
+    </article>
+    <article class="node wow fadeInDown" data-wow-offset="700">
+      <img src="images/layer-03.png" alt="wow">
+      <div class="col-4-12">
+        <h5>кроссбраузерный css</h5>
+        <p style="margin-bottom: 60px;">Мы решаем любые проблемы, связанные с адекватным отображением сайта,не зависимо от того какой браузер использует пользователь. </p>
+      </div>
+    </article>
+  </div>
 </section>
 
 
-
-<section class="l2">
-  <div class="wrapper">
-  <center>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<section id="certificates">
+<center>
+  <table>
+    <tr>
+        <td height="112" align="center" valign="middle">
+          <div class="sertif">
+          <span class="title w">Наши сертификаты</span>
+  <ul id="sertificates">
+    <li><img src="images/s1.png"/></li>
+    <li><img src="images/s2.png" /></li>
+    <li><img src="images/s3.png" /></li>
+    <li><img src="images/s4.png" /></li>    
+    <li><img src="images/s5.png" /></li> 
+    <li><img src="images/s6.png" /></li> 
+  </ul> 
+<div class="clearout"></div> 
+          </div>
+        </td>
+      </tr>
+        </table>
+</center>
+</section>
+<section id="lp_sect">
+<center>
+  <table>
+        
       <tr>
-        <td height="175" align="center" valign="bottom"><img src="images/info.gif" width="955" height="143"></td>
+        <td height="120" align="center" valign="top"><span class="title">Последние проекты</span></td>
       </tr>
       <tr>
-        <td height="112" align="center" valign="middle"><img src="images/info2.gif" width="658" height="64"></td>
-      </tr>
-      <tr>
-        <td height="60" align="center" valign="top"><img src="images/shadow.gif" width="955" height="38"></td>
-      </tr>
-      <tr>
-        <td height="120" align="center" valign="top"><span class="title">Последние 10 работ</span></td>
-      </tr>
-      <tr>
-        <td height="500" align="center" valign="top"><img src="images/works.gif" width="955" height="496"></td>
+        <td align="center" valign="top">
+<div class="last_projects">
+<ul class="list_img">
+  <li><a href="#"><figure><img src="images/prj1.png"><figcaption ><b>интернет-магазин<br>товаров для детей</b><br><span>Mercurius Russia</span><br><b>г. Санкт-Петербург</b></figcaption></figure></a></li>
+<li><a href="#"><figure><img src="images/prj2.png"><figcaption><b>корпоративный сайт<br></b><br><span>Чистые лапки</span><br><b>г. Санкт-Петербург</b></figcaption></figure></a></li>
+  <li><a href="#"><figure><img src="images/prj3.png"><figcaption ><b>консалтинг<br>исследования рынка</b><br><span>Решение</span><br><b>г. Санкт-Петербург</b></figcaption></figure></a></li>
+  <li><a href="#"><figure><img src="images/prj4.png"><figcaption><b>интернет-магазин<br>продажа сейфов</b><br><span>Сейф ТУТ</span><br><b>г. Москва</b></figcaption></figure></a></li>
+  <li><a href="#"><figure><img src="images/prj7.png"><figcaption><b>корпоративный сайт<br>производителя профилей</b><br><span>Dewmark</span><br><b>г. Москва</b></figcaption></figure></a></li>
+  <li><a href="#"><figure><img src="images/prj6.png"> <figcaption ><b>интернет-портал<br>детской обуви</b><br><span>ЭлитБутс</span><br><b>г. Новгород</b></figcaption></figure></a></li>
+  <li><a href="#"><figure><img src="images/prj5.png"><figcaption><b>корпоративный сайт<br>инжиниринговой компании</b><br><span>НИОРИС</span><br><b>г. Санкт-Петербург</b></figcaption></figure></a></li>
+  <li><a href="#"><figure><img src="images/prj8.png"><figcaption ><b>корпоративный сайт<br>группы компаний</b><br><span>Перемена</span><br><b>г. Воронеж</b></figcaption></figure></a></li>
+</ul>
+</div>
+        </td>
       </tr>
       <tr>
         <td height="42" align="center" valign="top">&nbsp;</td>
       </tr>
-      <tr>
-        <td height="94" align="center" valign="top"><img src="images/fullp.gif" width="212" height="36"></td>
-      </tr>
-    </table>
-  </center>
-  </div> 
-  <!-- end wrapper -->
+     
+  </table>
+</center>
 </section>
-
-
-
 <section class="l3">
   <div class="wrapper">
   <center>
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
       <tr>
-        <td height="122" align="center" valign="bottom"><span class="title">Почему стоит выбрать нас </span></td>
+        <td align="center" valign="middle"><span class="title w">Почему стоит выбрать нас </span></td>
       </tr>
       <tr>
-        <td height="455" align="center" valign="top">
-		<div style="height: 25px;"></div>
-		<img src="images/diamong.png" width="883" height="373"></td>
+        <td valign="top">
+    <div id="specials">
+    <div class="rocket">
+    <a href="#"><i></i></a>
+  </div>
+  <div class="spisok">
+    <ul>
+<li><span >Работает с разными системами управления и сможет предложить Вам оптимальное решение;</span></li>
+<li><span >Предоставляет сопутствующие услуги (регистрация домена, разработка логотипа и flash, создание уникального текстового контента).</span></li> 
+<li><span >Большой плюс если компания занимается продвижением: такая веб-студия при создании сайта учитывает современные тенденции SEO.</span></li>
+<li><span >Работает с предоставлением гарантий и техподдержки;</span></li>
+<li><span >Заботится об обратной связи (аська, скайп, телефон (и не только мобильный), бесплатная горячая линия).</span></li>
+</ul>
+  </div>
+</div>
+    </td>
       </tr>
     </table>
   </center>
@@ -155,25 +292,42 @@
         <td height="92" align="center" valign="top"><span class="title">Отзывы клиентов </span></td>
       </tr>
       <tr>
-        <td align="center" valign="top"><img src="images/rew1.gif" width="924" height="239"></td>
+        <td align="center" valign="top"><img src="images/1.png" width="924" ></td>
       </tr>
       <tr>
         <td height="28" align="center" valign="top">&nbsp;</td>
       </tr>
       <tr>
-        <td align="center" valign="top"><img src="images/rew1.gif" width="924" height="239"></td>
+        <td align="center" valign="top"><img src="images/1.png" width="924" ></td>
       </tr>
       <tr>
         <td height="28" align="center" valign="top">&nbsp;</td>
       </tr>
       <tr>
-        <td align="center" valign="top"><img src="images/rew1.gif" width="924" height="239"></td>
+        <td align="center" valign="top"><img src="images/1.png" width="924" ></td>
       </tr>
       <tr>
         <td height="28" align="center" valign="top">&nbsp;</td>
       </tr>
       <tr>
         <td align="center" valign="top">&nbsp;</td>
+      </tr>
+            <tr>
+        <td align="center" valign="bottom">
+        <!--Партнёры//-->
+          <!--div class="partners">
+            <span class="title">Мы работаем совместно</span>
+            <div>
+            <img src="images/bitrix.gif">
+            <img src="images/umi.png">
+            <img src="images/wordpress.png">
+            <img src="images/joomla.png">
+            <img src="images/opencart.jpg">
+            <img src="images/regru.png">
+          </div>
+        </div-->
+          <!--//Партнёры-->
+        </td>
       </tr>
     </table>
   </center>
@@ -208,7 +362,7 @@
 			<span class="input-wrap"><span class="input-error">Заполните это поле</span>
 			<input type="text" class="mask-input phone-input" name="client_phone" placeholder="Введите телефон" />
 			</span>&nbsp;
-			<button class="btn-yellow" onClick="yaCounter26970030.reachGoal('orderopen'); return true;">&nbsp;</button>
+			<button class="btn-green" onClick="yaCounter26970030.reachGoal('orderopen'); return true;">сделать заказ</button>
 			</form>
 			
 	  
@@ -222,7 +376,7 @@
   <div class="wrapper clearfix">
   <table width="100%" height="100" border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td width="246" align="left"><img src="images/logo.gif"></td>
+    <td align="left" class="logo"><img src="images/logo.png"></td>
     <td align="right" valign="middle">
 	Есть вопросы? Звоните&nbsp;&nbsp;&nbsp;
 	<span class="tel_bottom">+7&nbsp;(499)&nbsp;34-68-200</span><br>
@@ -246,7 +400,7 @@
         <input name="phrase" type="hidden" value="<?=$phrase?>">
     <span class="input-wrap"><span class="input-error">Заполните это поле</span><input type="text" name="client_name" placeholder="Введите имя" /></span>
     <span class="input-wrap"><span class="input-error">Заполните это поле</span><input type="text" class="mask-input phone-input" name="client_phone" placeholder="Введите телефон" /></span>
-    <button class="btn-yellow" onClick="yaCounter26276391.reachGoal('orderpopup'); return true;"></button>
+    <button class="btn-green" onClick="yaCounter26276391.reachGoal('orderpopup'); return true;">сделать заказ</button>
   </form>
 </div>
 <!-- end popup 1 -->
@@ -264,6 +418,29 @@
 <!-- Yandex.Metrika counter -->
 
 <!-- /Yandex.Metrika counter -->
-
+<script type="text/javascript">
+$("#sertificates").flexisel({
+        visibleItems: 4,
+        animationSpeed: 1000,
+        autoPlay: false,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 2
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });
+</script>
 </body>
 </html>

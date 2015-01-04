@@ -45,7 +45,7 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  $('.btn-yellow-wrap, .btn-yellow').click(function(e){
+  $('.btn-green-wrap, .btn-green').click(function(e){
     if (!$(this).closest('form').length>0) {
       $('.popup-order').overlay().centering().fadeIn(200);
     };

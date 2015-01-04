@@ -51,7 +51,7 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  $('.btn-yellow-wrap, .btn-yellow').click(function(e){
+  $('.btn-green-wrap, .btn-green').click(function(e){
     if (!$(this).closest('form').length>0) {
       $('.popup-order').overlay().centering().fadeIn(200);
     };
@@ -107,6 +107,25 @@ $.fn.centering=function() {
   this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
   return this;
 };
+
+var rocket_x = 3;
+var rocket_y = 7;
+var rocket_speed = 1000;
+function rocket_left()
+{
+  $('#specials i').animate({left:'-='+rocket_x+'px',top:'-='+rocket_y+'px'},rocket_speed,function(){
+    rocket_right();
+  });
+}
+function rocket_right()
+{
+  $('#specials i').animate({left:'+='+rocket_x+'px',top:'+='+rocket_y+'px'},rocket_speed,function(){
+    rocket_left();
+  });
+}
+$(document).ready(function(){
+ rocket_left()
+});
 
 /*
     jQuery Masked Input Plugin
