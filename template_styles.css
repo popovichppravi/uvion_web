@@ -28,7 +28,7 @@ body {
   -webkit-text-size-adjust:100%;
 }
 
-a { color:#03f; text-decoration:none;  }
+a { color:#555; text-decoration:none;  }
 a:hover { text-decoration:underline; }
 a.ajax-link {
   text-decoration:none;
@@ -106,7 +106,13 @@ border-right: none;
 .l5 { }
 .l6 { }
 .l7 { }
-.l10 {background-color: #f6f6f6;}
+.l10 
+{
+  background-color: #f6f6f6;
+border: 2px dashed #fff;
+border-left: none;
+border-right: none;
+}
 
 
 
@@ -499,7 +505,6 @@ margin: 0;
 .last_projects ul li
 {
   display: inline-block;
-  padding: 2px;
 }
 .list_img img
 {
@@ -640,6 +645,59 @@ position: absolute;
 border-left: none;
 border-right: none;
 }
+
+/*--Отзывы--*/
+.recall
+{
+background: #F6F6F6;
+padding: 20px 30px;
+text-align: left;
+}
+
+.recall .person
+{
+display: inline-block;
+}
+
+.recall .person img
+{
+width: 150px;
+}
+
+.text_recall h1
+{
+font-size: 20px;
+background: #23BEF0;
+color: #fff;
+padding: 10px 30px;
+}
+
+.text_recall
+{
+  display: inline-block;
+width: 700px;
+margin-left: 30px;
+vertical-align: top;
+}
+
+.text_recall span
+{
+  width: 580px;
+display: inline-block;
+text-align: justify;
+}
+.text_recall img
+{
+  float: right;
+}
+
+.person h2
+{
+  font-size: 16px;
+text-align: center;
+width: 150px;
+} 
+/*--end Отзывы--*/
 
 /*  -------------------------------------------------
   Стили для печатной версии | Print styles
@@ -1136,9 +1194,7 @@ margin: 10px 0 10px 0;
           font: 20px/47px "NeoSans",Tahoma,sans-serif;
         }
 
-footer {
-  color: #000;
-}
+
   footer .logo {
     float: left;
     margin: 8px 28px 0 0;
@@ -1182,7 +1238,7 @@ footer {
   .popup form input {
     height: 42px;
     line-height: 30px;
-    margin: 0 0 23px;
+    margin: 0 0 10px;
   }
   .popup form .btn-green {
     margin: 8px 0 0;
@@ -1195,3 +1251,103 @@ footer {
     color: #FF0000;
     font: normal normal 20px/24px "metaboldlfcregular", Tahoma, sans-serif;
   }
+
+  .zapros
+  {
+    background: #EFEBDF;
+background-repeat: repeat-x;
+padding-top: 15px;
+padding-bottom: 15px;
+margin-bottom: 30px;
+  }
+
+/*--Work--*/
+.homeb {
+position: fixed;
+z-index: 50;
+top: 0;
+left: 50%;
+margin: 0 0 0 -70px;
+text-align: center;
+width: 150px;
+text-transform: uppercase;
+background: rgba(255, 255, 255, 0.8);
+border: 1px solid #23BEF0;
+}
+
+.homeb a
+{
+  color: #555;
+  font-size: 20px;
+}
+.homeb img
+{
+  opacity: 0.5;
+  width: 70px;
+}
+.homeb img, .homeb span
+{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.homeb a:hover
+{
+  text-decoration: none;
+}
+.prew_prj, .next_prj
+{
+ background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #23BEF0;
+  padding: 10px 20px 10px 40px;
+  position: relative;
+}
+
+.prew_prj
+{
+padding: 10px 20px 10px 40px;
+}
+
+.next_prj
+{
+  padding: 10px 40px 10px 20px;
+}
+
+.prew_prj:hover, .next_prj:hover
+{
+  text-decoration: none;
+}
+
+.prew_prj:before
+{
+content: '';
+background: url(images/strelka_l.png);
+background-size: 20px;
+display: inline-block;
+width: 20px;
+height: 20px;
+position: absolute;
+left: 10px;
+}
+
+.next_prj:after
+{
+content: '';
+background: url(images/strelka_r.png);
+background-size: 20px;
+display: inline-block;
+width: 20px;
+height: 20px;
+position: absolute;
+right: 10px;
+}
+
+.prevnext {
+position: fixed;
+z-index: 50;
+bottom: 20px;
+left: 50%;
+margin: 0 0 0 -475px;
+}
+/*--end Work--*/
+

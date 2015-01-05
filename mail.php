@@ -8,13 +8,14 @@
 <?php
 $cl_name = htmlspecialchars($_GET['client_name']);
 $cl_phone = htmlspecialchars($_GET['client_phone']);
+$cl_email = htmlspecialchars($_GET['client_email']);
 $phrase = htmlspecialchars($_GET['phrase']);
 $referer = htmlspecialchars($_GET['referer']);
 
- $to  = 'grad.artur@gmail.com';
+ $to  = 'yulichka842@mail.ru';
 
 // тема письма
-$subject = 'Заявка на разработку сайта от- '.$cl_name.' - '.$cl_phone.'';
+$subject = 'Заявка на разработку сайта от- '.$cl_name.' - '.$cl_phone.' - '.$cl_email.'';
 
 // текст письма
 $message = '
@@ -27,6 +28,7 @@ $message = '
 
   <p><b>Имя: </b>'.$cl_name.'</p>
   <p><b>Телефон клиента: </b>'.$cl_phone.'</p>
+  <p><b>E-mail клиента: </b>'.$cl_email.'</p>
   <p>Источник:'.$referer.'</p>
   <p>Фраза:'.$phrase.'</p>
 

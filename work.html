@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Uvion | Dewmark</title>
+	<meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="stylesheet" type="text/css" href="template_styles.css" />
+
+     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+<body>
+<div class="homeb"><a href="/"><img src="images/home.png" border="0">
+<span>На главную</span>
+</a></div>
+<div class="prevnext">
+<table width="950" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td align="left">
+
+	<!-- LINK1 -->
+	<a href="#" class="prew_prj">предыдущий проект</a></td>
+    <td width="215" align="left">
+
+
+	<!-- LINK2 -->
+	<a href="#" class="next_prj">следующий проект</a></td>
+    <td width="175"><button class="btn-green" onclick="yaCounter26970030.reachGoal('orderopen'); return true;">сделать заказ</button></td>
+  </tr>
+</tbody></table>
+</div>
+<div class="overlay"></div>
+<!--HEADER//-->
+<header>
+  <div class="wrapper clearfix">
+  <table width="100%" height="100" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="200" align="left" class="logo"><a href="#"><img src="images/logo.png"></a></td>
+    <td align="right" valign="middle">
+	<span class="tel">+7&nbsp;(938)&nbsp;47-32-706</span><br><span  class="email"><a href="mailto:info@uvion.ru">web@uvion.ru</a></span></td>
+  </tr>
+  </table>
+  </div>
+</header>
+<!--//HEADER-->
+<section>
+<div class="wrapper">
+	<center>
+		<img src="images/works/work1.png" width="950">
+	</center>
+</div>
+
+</section>
+
+
+<!--FOOTER//-->
+<footer>
+</footer>
+<!--//FOOTER-->
+
+<!-- popup 1 -->
+<div class="popup popup-order">
+  <a href="#" class="close"></a>
+  <div class="title">
+    Оставьте свои <br/>
+    контактные данные, <br/>
+    мы вам перезвоним
+  </div>
+  <form method="get" action="mail.php">
+        <input name="referer" type="hidden" value="<?=$referer?>">
+        <input name="phrase" type="hidden" value="<?=$phrase?>">
+    <span class="input-wrap"><span class="input-error">Заполните это поле</span><input type="text" name="client_name" placeholder="Введите имя" /></span>
+    <span class="input-wrap"><span class="input-error">Заполните это поле</span><input type="text" class="mask-input phone-input" name="client_phone" placeholder="Введите телефон" /></span>
+    <span class="input-wrap"><span class="input-error">Заполните это поле</span>
+			<input type="text" class="email-input" name="client_email" placeholder="Введите e-mail" /></span>&nbsp;
+    <button class="btn-green" onClick="yaCounter26276391.reachGoal('orderpopup'); return true;">сделать заказ</button>
+  </form>
+</div>
+<!-- end popup 1 -->
+	
+</body>
+</html>

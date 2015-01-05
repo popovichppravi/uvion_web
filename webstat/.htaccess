@@ -1,7 +1,0 @@
-AuthType Basic
-AuthName "/www/start8.ru/web/webstat"
-AuthUserFile /var/www/elis/data/etc/63569945.passwd
-DirectoryIndex index.html
-<Limit GET POST>
-	require valid-user
-</Limit>
